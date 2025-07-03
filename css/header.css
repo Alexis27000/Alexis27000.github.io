@@ -6,41 +6,87 @@ nav{
 
 }
 
-nav ul{
+nav ul#menu_mobile{
 
-    display:flex;
+    display: none;
+    flex-direction: column;
     justify-content:center;
-    gap:3em;
+    position:absolute;
+    z-index: 3;
+
     list-style-type: none;
-    background-color:#464749e1;
+    background-color:#464749;
 
 }
 
-nav ul li{
+nav ul#menu_mobile li{
 
     padding:1.5em 2em 2em 2em;
 
 }
 
-nav ul li:hover{
 
-    background-color:#656668;
 
-}
-
-nav ul li a{
+nav ul#menu_mobile li a{
 
     text-decoration:none;
     color:#e1e2e6;
 
 }
 
-nav ul li a:hover{
+
+
+
+
+
+
+
+
+
+
+
+nav ul#menu_desktop{
+
+    display:flex;
+    justify-content: space-around;
+    gap:3em;
+    list-style-type: none;
+    background-color:#464749;
+
+}
+
+nav ul#menu_desktop li{
+
+    padding:1.5em 2em 2em 2em;
+
+}
+
+nav ul#menu_desktop li:hover{
+
+    background-color:#656668;
+
+}
+
+nav ul#menu_desktop li a{
+
+    text-decoration:none;
+    color:#e1e2e6;
+
+}
+
+nav ul#menu_desktop li a:hover{
 
     color:#ffffff;
     text-decoration:underline;
 
 }
+
+
+
+
+
+
+
 
 #menu_toggle{
 
@@ -59,7 +105,7 @@ width:40px;
 height: 6px;
 background-color:black;
 border-radius: 1em 1em 1em 1em;
-
+transition: all 0.5s ease-in-out;
 
 }
 nav #menu_toggle .nav_toggle_item:nth-child(2) {
@@ -68,7 +114,7 @@ width:40px;
 height: 6px; 
 background-color: black;
 border-radius: 1em 1em 1em 1em;
-
+transition: all 0.5s ease-in-out;
 }
 nav #menu_toggle .nav_toggle_item:nth-child(3) {
 
@@ -76,16 +122,10 @@ width:40px;
 height: 6px;
 background-color:black;
 border-radius: 1em 1em 1em 1em;
-
+transition: all 0.5s ease-in-out;
 }
 
 
-#menu_mobile{
-    display: none;
-    list-style: none;
-    flex-direction: column;
-
-}
 #menu_mobile.active{
     display:flex ;
 }
@@ -97,12 +137,15 @@ border-radius: 1em 1em 1em 1em;
 
 .expanded :nth-child(1) {
     transform: rotate(45deg) translate(10px, 9px);
+    transition: all 0.5s ease-in-out;
 }
 
 
 .expanded :nth-child(2) {
     opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 .expanded :nth-child(3) {
     transform: rotate(-45deg) translate(9px, -8px);
+    transition: all 0.5s ease-in-out;
 }
