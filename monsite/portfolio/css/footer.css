@@ -1,0 +1,32 @@
+
+footer{
+
+position:relative;
+
+}
+
+
+footer div{
+
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+footer div ul{
+
+
+    background-color:  #464749e1 ;
+    padding: 1em;
+    display:flex;
+    justify-content: center;
+    gap:55em;
+    list-style-type: none;
+}
+
+footer div ul li a:hover{
+
+  color:#e1e2e6;
+}
