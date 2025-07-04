@@ -1,0 +1,63 @@
+main section#professionnalexperience h2{
+
+display: grid;
+justify-content:center;
+padding:4em 2em 2em 2em;
+font-family: "DM Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+  
+}
+
+main section#professionnalexperience h2:after{
+
+content: ' ';
+display: block;
+margin: 0;
+width: 20rem;
+height: 0.10rem;
+background-color: #000000;
+
+}
+
+main section#professionnalexperience ul{
+
+display: flex;
+flex-wrap: wrap;
+list-style-type: none;
+justify-content:left;
+padding:1em 2em 2em 2em;
+margin:0.5em 0.5em 0.5em 6em;
+
+}
+
+main section#professionnalexperience ul h3{
+
+border-bottom: 0.15rem inset #000000;
+color:white;
+}
+
+main section#professionnalexperience ul li .date{
+
+border-bottom: 0.15rem inset #000000;
+
+}
+
+main section#professionnalexperience ul li .entreprise{
+
+border-bottom: 0.15rem inset #000000;
+
+}
+
+
+
+
+main section#professionnalexperience ul li{
+
+width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); /** - MG - MD - PG - PD **/
+margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+padding: 1rem 1rem 1rem 1rem;
+background-color:  #7a7b81d8 ;
+border-radius: 0.5em 0.5em 0.5em 0.5em;
+
+}

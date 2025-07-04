@@ -1,0 +1,84 @@
+main section#logicielsetlang h2{
+
+
+font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: grid;
+    justify-content:center;
+    padding:4em 2em 2em 2em;
+
+}
+main section#logicielsetlang h2:after{
+content: ' ';
+    width: 19.25rem;
+    height: 0.10rem;
+    background-color: #000000;
+    display: block;
+    margin: 0;
+}
+
+
+main section#logicielsetlang ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+main section#logicielsetlang ul li{
+    width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color:  #caccd3 ;
+    border-radius: 1rem 1rem 1rem 1rem;
+    list-style-type:none;
+}
+
+
+main section#logicielsetlang h3{
+
+
+font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+main section#logicielsetlang h4{
+
+
+font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+
+}
+
+main section#logicielsetlang ul li .niveau{
+    width: calc(100% - 3rem);
+    border: 0.125rem solid #000000;
+    height: 1rem;
+    border-radius: 1rem;
+
+}
+main section#logicielsetlang ul li .niveau span{
+    text-indent: -1000rem;
+    display: block;
+    height: 0.75rem;
+    width: 0;
+    background-color: #363636;
+    border-radius: 1rem;
+}
+
+main section#logicielsetlang ul li .niveau.bonNiveau span{
+    width: 75%;
+
+}
+
+main section#logicielsetlang ul li .niveau.medium span{
+    width: 50%;
+}
+
+
+main section#logicielsetlang ul li .niveau.debutant span{
+    width: 25%;
+}
