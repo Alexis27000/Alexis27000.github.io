@@ -1,6 +1,6 @@
 main div section#presentation{
 
-    padding:6em 2em 2em 2em;
+    padding:4em 2em 2em 2em;
 
 }
 
@@ -11,7 +11,7 @@ main section#presentation h2{
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
+
 }
 
 main section#presentation h2:after{
@@ -20,8 +20,7 @@ main section#presentation h2:after{
     width: 8.5rem;
     height: 0.10rem;
     background-color: #000000;
-    display: block;
-    margin: 0;
+
 }
 
 main section#presentation div{
@@ -33,4 +32,11 @@ main section#presentation div{
     margin:4em 4em 2em 4em;
     background-color:  #7a7b81d8 ;
     border-radius:0.5em;
+
+}
+
+main section#presentation div p{
+
+    text-align:justify; 
+
 }

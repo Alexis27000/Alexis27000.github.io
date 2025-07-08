@@ -12,10 +12,8 @@ font-weight: 400;
 main section#professionnalexperience h2:after{
 
 content: ' ';
-display: block;
-margin: 0;
-width: 20rem;
-height: 0.10rem;
+width: 13.25em;
+height: 0.10em;
 background-color: #000000;
 
 }
@@ -33,19 +31,19 @@ margin:0.5em 0.5em 0.5em 6em;
 
 main section#professionnalexperience ul h3{
 
-border-bottom: 0.15rem inset #000000;
+border-bottom: 0.15rem inset #1f1f1f;
 color:white;
 }
 
 main section#professionnalexperience ul li .date{
 
-border-bottom: 0.15rem inset #000000;
+border-bottom: 0.15rem inset #1f1f1f;
 
 }
 
 main section#professionnalexperience ul li .entreprise{
 
-border-bottom: 0.15rem inset #000000;
+border-bottom: 0.15rem inset #1f1f1f;
 
 }
 
@@ -54,10 +52,10 @@ border-bottom: 0.15rem inset #000000;
 
 main section#professionnalexperience ul li{
 
-width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); /** - MG - MD - PG - PD **/
+width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem);
 margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 padding: 1rem 1rem 1rem 1rem;
 background-color:  #7a7b81d8 ;
 border-radius: 0.5em 0.5em 0.5em 0.5em;
-
+text-align:justify;
 }

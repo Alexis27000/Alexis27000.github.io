@@ -2,48 +2,57 @@ main section#certifications h2{
 
 
 font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  display: grid;
-    justify-content:center;
-    padding:4em 2em 2em 2em;
+font-optical-sizing: auto;
+font-weight: 400;
+display: grid;
+justify-content:center;
+padding:4em 2em 2em 2em;
 
 }
+
 main section#certifications h2:after{
 
 content: ' ';
-    width: 12.5rem;
-    height: 0.10rem;
-    background-color: #000000;
-    display: block;
-    margin: 0;
+width: 12.5rem;
+height: 0.10rem;
+background-color: #000000;
+ 
 }
 
 main section#certifications ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content:left;
-    padding:1em 2em 2em 2em;
-    margin:0.5em 0.5em 0.5em 6em;
+display: flex;
+flex-wrap: wrap;
+list-style-type: none;
+justify-content:left;
+padding:1em 2em 2em 2em;
+margin:0.5em 0.5em 0.5em 6em;
+
 }
+
 main section#certifications ul li{
-    width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    padding: 1rem 1rem 1rem 1rem;
-    background-color:  #7a7b81d8 ;
-    border-radius: 1rem 1rem 1rem 1rem;
+
+width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
+margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+padding: 1rem 1rem 1rem 1rem;
+background-color:  #7a7b81d8 ;
+border-radius: 1rem 1rem 1rem 1rem;
 }
+
 main section#certifications ul h3{
-border-bottom: 0.15rem inset #000000;
+
+border-bottom: 0.15rem inset #1f1f1f;
 color:white;
+
 }
 
 main section#certifications ul li .date{
- border-bottom: 0.15rem inset #000000;   
+
+ border-bottom: 0.15rem inset #1f1f1f;
+
 }
 
 main section#certifications ul li .etablissement{
- border-bottom: 0.15rem inset #000000;   
+
+ border-bottom: 0.15rem inset #1f1f1f; 
+   
 }
