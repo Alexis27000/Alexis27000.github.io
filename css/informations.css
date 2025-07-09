@@ -9,6 +9,12 @@ margin:4em;
 
 }
 
+main section#autresinformations section#coordonnees section#competencesprofessionnelles section#langues section#centresdinteret{
+
+ width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
+
+}
+
 main section#coordonnees h2{
 
 font-family: "DM Sans", sans-serif;
@@ -27,7 +33,7 @@ content: ' ';
 width: 9.25rem;
 height: 0.10rem;
 background-color: #000000;
-display: block;
+
 margin: 0;
 
 }
@@ -42,10 +48,13 @@ font-weight: 400;
 
  main section#coordonnees{
 
+
+display:grid;
 background-color:  #7a7b81d8 ;
-padding: 2rem 5rem 2rem 5rem;
-margin: 0 2rem 2rem 2rem;
+padding: 2rem 2rem 2rem 2rem;
+margin: 0 1rem 2rem 1rem;
 border-radius: 1rem 1rem 1rem 1rem;
+
 
 }
 
@@ -121,9 +130,10 @@ transform:scale(1.25);
 
 main section#competencesprofessionnelles{
     
+display:grid;
 background-color:  #7a7b81d8 ;
-padding: 2rem 2rem 2rem 2rem;
-margin: 0 2rem 2rem 2rem;
+padding: 2rem 1rem 2rem 1rem;
+margin: 0 1rem 2rem 1rem;
 border-radius: 1rem 1rem 1rem 1rem;
 
 }
@@ -172,7 +182,7 @@ height:150px;
 main section#langues{
 
 background-color:  #7a7b81d8 ;
-padding: 2rem 5rem 2rem 5rem;
+padding: 2rem 2rem 2rem 2rem;
 margin: 0 2rem 2rem 2rem;
 border-radius: 1rem 1rem 1rem 1rem;
 
@@ -200,7 +210,14 @@ display: block;
 margin: 0.5rem 0 0 0;
 
 }
+main section#langues h3{
 
+font-family: "DM Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;  
+color:white;
+}
 main section#langues ul{
 
 display: flex;
@@ -265,7 +282,7 @@ width: 50%;
 main section#centresdinteret{
 
 background-color:  #7a7b81d8 ;
-padding: 2rem 5rem 2rem 5rem;
+padding: 2rem 2rem 2rem 2rem;
 margin: 0 2rem 2rem 2rem;
 border-radius: 1rem 1rem 1rem 1rem;
 

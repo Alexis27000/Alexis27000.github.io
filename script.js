@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener('DOMContentLoaded', chargerMenu);
 
 async function chargerMenu() {
@@ -73,7 +74,6 @@ fetch('composants/footer.html')
   .catch(error => {
     console.error('Erreur :', error);
   });
-
 
 
 

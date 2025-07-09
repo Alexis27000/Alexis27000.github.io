@@ -16,10 +16,8 @@ footer div{
 }
 
 
-footer div ul{
+footer nav ul{
 
-
-    
     display:flex;
     justify-content: space-between;
     background-color:  #464749e1 ;
@@ -28,15 +26,61 @@ footer div ul{
 
 }
 
-footer div ul li a{
+footer nav ul li a{
 
 text-decoration:none;
 color:#e1e2e6;
 }
 
 
-footer div ul li a:hover{
+footer nav ul li a:hover{
 
   color:#ffffff;
   text-decoration:underline;
+}
+
+div.popin{
+    position: fixed;
+    z-index: 100;
+    background:#1a1b1e;
+    left:50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 1rem 1rem 1rem 1rem;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    width: calc(100% - 10rem);
+    max-width: 50rem;
+    text-align: center;
+}
+div.popin a.fermer{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+div.popin a.fermer:hover{
+    color:#ffffff;
+    transform:scale(1.25)
+}
+div.popin h2{
+font-family: "Red+Hat+Display", sans-serif;
+ font-size: 1.25rem;
+ line-height: 1rem;
+ margin-bottom: 1rem;
+}
+div.popin  h2:after{
+    content: ' ';
+    width: 50rem;
+    height: 0.25rem;
+    background-color: #ffffff;
+    display: block;
+    margin: 0.5rem 0 0 0;
+}
+div.popin .texte{
+    font-size: 1.125rem;
+}
+div.popin .texte p{
+    margin-bottom: 0.5rem;
 }
