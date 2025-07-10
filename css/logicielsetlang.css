@@ -2,85 +2,97 @@ main section#logicielsetlang h2{
 
 
 font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  display: grid;
-    justify-content:center;
-    padding:6em 2em 2em 2em;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+display: grid;
+justify-content:center;
+padding:6em 2em 2em 2em;
 
 }
+
 main section#logicielsetlang h2:after{
-content: ' ';
-    width: 19.25rem;
-    height: 0.10rem;
-    background-color: #000000;
-    display: block;
-    margin: 0;
-}
 
+content: ' ';
+width: 19.25rem;
+height: 0.10rem;
+background-color: #000000;
+display: block;
+margin: 0;
+
+}
 
 main section#logicielsetlang ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-main section#logicielsetlang ul li{
-    width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    padding: 1rem 1rem 1rem 1rem;
-    background-color:  #7a7b81d8;
-    border-radius: 1rem 1rem 1rem 1rem;
-    list-style-type:none;
-    box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+display: flex;
+flex-wrap: wrap;
+
 }
 
+main section#logicielsetlang ul li{
+
+width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
+margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+padding: 1rem 1rem 1rem 1rem;
+background-color:  #7a7b81d8;
+border-radius: 1rem 1rem 1rem 1rem;
+list-style-type:none;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
 
 main section#logicielsetlang h3{
 
-
 font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
 
 }
+
 main section#logicielsetlang h4{
 
-
 font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  color:white;
-
+font-optical-sizing: auto;
+font-weight: 400;
+color:white;
 
 }
 
 main section#logicielsetlang ul li .niveau{
-    width: calc(100% - 3rem);
-    border: 0.125rem solid #000000;
-    height: 1rem;
-    border-radius: 1rem;
+
+width: calc(100% - 3rem);
+border: 0.125rem solid #000000;
+height: 1rem;
+border-radius: 1rem;
 
 }
+
 main section#logicielsetlang ul li .niveau span{
-    text-indent: -1000rem;
-    display: block;
-    height: 0.75rem;
-    width: 0;
-    background-color: #636363;
-    border-radius: 1rem;
+
+text-indent: -1000rem;
+display: block;
+height: 0.75rem;
+width: 0;
+background-color: #636363;
+border-radius: 1rem;
+
 }
 
 main section#logicielsetlang ul li .niveau.bonNiveau span{
-    width: 75%;
+
+width: 75%;
 
 }
 
 main section#logicielsetlang ul li .niveau.medium span{
-    width: 50%;
+
+width: 50%;
+
 }
 
-
 main section#logicielsetlang ul li .niveau.debutant span{
-    width: 25%;
+
+width: 25%;
+
 }

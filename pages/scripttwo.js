@@ -74,6 +74,20 @@ fetch('../composants/footertwo.html')
   })
   .then(data => {
     footertwo.innerHTML = data;
+
+$('.popin').hide(); /*fadeOut()*/
+			$('footer nav ul li a').click(function(){
+				url = $(this).attr('href');
+				//alert(url);
+				$(url).show();/*fadeIn()*/
+				return false; /* Je n execute pas le lien */
+	
+			});
+			$('a.fermer').click(function(){
+				$('.popin').hide();/*fadeIn()*/
+				return false; /* Je n execute pas le lien */
+	
+			});
   })
   .catch(error => {
     console.error('Erreur :', error);

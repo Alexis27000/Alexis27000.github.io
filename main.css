@@ -9,7 +9,6 @@
 @import url("css/responsive.css");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
 *{
    margin:0;
    padding:0;
@@ -17,7 +16,7 @@
 }
 
 main{
-    min-height: 150vh;
+    min-height: 170vh;
     scroll-behavior: smooth;
     min-width: 360px;
       background: url('../assets/studiogris.jpg') no-repeat 0 0;
