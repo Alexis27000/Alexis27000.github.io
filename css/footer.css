@@ -69,17 +69,19 @@ font-family: "Red+Hat+Display", sans-serif;
  font-size: 1.25rem;
  line-height: 1rem;
  margin-bottom: 1rem;
+ color:white;
 }
 div.popin  h2:after{
     content: ' ';
-    width: 50rem;
-    height: 0.25rem;
+    width: 45rem;
+    height: 0.15rem;
     background-color: #ffffff;
     display: block;
     margin: 0.5rem 0 0 0;
 }
 div.popin .texte{
     font-size: 1.125rem;
+    color:white;
 }
 div.popin .texte p{
     margin-bottom: 0.5rem;

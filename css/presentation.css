@@ -1,6 +1,6 @@
 main div section#presentation{
 
-    padding:6em 2em 2em 2em;
+    padding:9em 2em 2em 2em;
 
 }
 
@@ -17,7 +17,7 @@ main section#presentation h2{
 main section#presentation h2:after{
 
     content: ' ';
-    width: 8.5rem;
+    width: 8.75rem;
     height: 0.10rem;
     background-color: #000000;
 
@@ -32,6 +32,7 @@ main section#presentation div{
     margin:4em 6em 2em 6em;
     background-color:  #7a7b81d8 ;
     border-radius:0.5em;
+    box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
 

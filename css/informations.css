@@ -5,13 +5,14 @@ main section#autresinformations{
 
 display:flex;
 flex-wrap:wrap;
-margin:4em;
+justify-content:center;
+padding:9em 2em 2em 2em;
 
 }
 
-main section#autresinformations section#coordonnees section#competencesprofessionnelles section#langues section#centresdinteret{
+main section#autresinformations section#coordonnees section#competencesprofessionnelles section#badgesobtenus section#langues section#centresdinteret{
 
- width: calc(100% / 3 - 0.5rem - 0.5rem - 1rem - 1rem); 
+ width: calc(100% / 3 - 0.5rem - 0.5rem - 0.5rem - 0.5rem); 
 
 }
 
@@ -34,8 +35,6 @@ width: 9.25rem;
 height: 0.10rem;
 background-color: #000000;
 
-margin: 0;
-
 }
 
 main section#coordonnees h3{
@@ -51,9 +50,10 @@ font-weight: 400;
 
 display:grid;
 background-color:  #7a7b81d8 ;
-padding: 2rem 2rem 2rem 2rem;
+padding: 0.5rem 2rem 2rem 2rem;
 margin: 0 1rem 2rem 1rem;
 border-radius: 1rem 1rem 1rem 1rem;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 
 }
@@ -96,11 +96,13 @@ list-style-type:none;
 
 main section#coordonnees ul li{
 
+
 margin: 0 0.5rem 0.5rem 0;
 
 }
 
 main section#coordonnees ul li a{
+    
 
 font-weight:800;
 border-bottom: 0.10rem solid transparent;
@@ -115,6 +117,7 @@ color: #09207a;
 }
 
 main section#coordonnees ul li img{
+
 
 font-size: 2.5rem;
 transition: all 0.5s ease-in-out;
@@ -132,13 +135,62 @@ main section#competencesprofessionnelles{
     
 display:grid;
 background-color:  #7a7b81d8 ;
-padding: 2rem 1rem 2rem 1rem;
+padding: 0.5rem 1rem 2rem 1rem;
 margin: 0 1rem 2rem 1rem;
 border-radius: 1rem 1rem 1rem 1rem;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
 
 main section#competencesprofessionnelles h2{
+
+font-family: "DM Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+justify-content:center;
+padding:1em 1em 1em 1em;
+
+}
+
+main section#competencesprofessionnelles h2:after{
+
+content: ' ';
+width: 21.25rem;
+height: 0.10rem;
+background-color: #000000;
+display: block;
+margin: 0.5rem 0 0 0;
+
+
+
+}
+
+main section#competencesprofessionnelles ul{
+
+display:grid;
+gap:1em;
+font-size: 1.25rem;
+text-align: center;
+padding: 2rem 0 2rem 0 ;
+list-style-type:none;
+
+
+}
+
+
+main section#badgesobtenus{
+    
+display:grid;
+background-color:  #7a7b81d8 ;
+padding: 0.5rem 1rem 2rem 1rem;
+margin: 0 1rem 2rem 1rem;
+border-radius: 1rem 1rem 1rem 1rem;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+main section#badgesobtenus h2{
 
 font-family: "DM Sans", sans-serif;
 font-optical-sizing: auto;
@@ -150,10 +202,10 @@ padding:1em 1em 1em 1em;
 
 }
 
-main section#competencesprofessionnelles h2:after{
+main section#badgesobtenus h2:after{
 
 content: ' ';
-width: 21.25rem;
+width: 11.25rem;
 height: 0.15rem;
 background-color: #000000;
 display: block;
@@ -162,7 +214,7 @@ margin: 0.5rem 0 0 0;
 
 }
 
-main section#competencesprofessionnelles ul{
+main section#badgesobtenus ul{
 
 font-size: 1.25rem;
 text-align: center;
@@ -171,20 +223,21 @@ list-style-type:none;
 
 }
 
-main section#competencesprofessionnelles ul iframe{
+main section#badgesobtenus ul li iframe{
 
 width:200px;
 height:150px;
-
 }
 
 
 main section#langues{
 
 background-color:  #7a7b81d8 ;
-padding: 2rem 2rem 2rem 2rem;
+padding: 0.5rem 2rem 2rem 2rem;
 margin: 0 2rem 2rem 2rem;
 border-radius: 1rem 1rem 1rem 1rem;
+height:20em;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
 
@@ -259,6 +312,7 @@ width: 0;
 background-color: #636363;
 border-radius: 0.5rem;
 
+
 }
 
 main section#langues ul li .niveau.Expert span{
@@ -282,9 +336,10 @@ width: 50%;
 main section#centresdinteret{
 
 background-color:  #7a7b81d8 ;
-padding: 2rem 2rem 2rem 2rem;
+padding: 0.5rem 2rem 2rem 2rem;
 margin: 0 2rem 2rem 2rem;
 border-radius: 1rem 1rem 1rem 1rem;
+height:25em;
 
 }
 
@@ -327,5 +382,6 @@ border-radius: 1rem 1rem 1rem 1rem;
 background-color:  #b5b6bed8 ;
 color: #000000;
 margin: 0 0.5rem 0.5rem 0;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
