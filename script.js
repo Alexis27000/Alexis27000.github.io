@@ -1,4 +1,9 @@
 
+  
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', chargerMenu);
@@ -7,6 +12,24 @@ async function chargerMenu() {
   try {
     const header = document.getElementById('header');
     const reponse = await fetch('composants/header.html');
+    
+
+
+
+    
+
+   const currentURL = window.location.pathname;
+  const links = document.querySelectorAll('nav ul li a');
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentURL) {
+      link.classList.add('active');
+    }
+  });
+  
+
+
+
 
     if (!reponse.ok) {
       throw new Error('Erreur lors du chargement du menu');
@@ -15,11 +38,14 @@ async function chargerMenu() {
     const html = await reponse.text();
     header.innerHTML = html;
 
+
+
+
+
+
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
-
-
 
 
 
@@ -33,7 +59,6 @@ async function chargerMenu() {
         function Pierre() {
              menu.classList.toggle("active");
          }
-
 
 
 
@@ -83,7 +108,10 @@ modalTriggers.forEach(trigger => trigger.
 
   function togglemodal(){
 
+  
     modalContainer.classList.toggle("active")
+
+
   }
 
  } )

@@ -75,6 +75,23 @@ fetch('../composants/footertwo.html')
   .then(data => {
     footertwo.innerHTML = data;
 
+    
+const modalContainer = document.
+querySelector(".modal-container");
+const modalTriggers = document.
+querySelectorAll(".modal-trigger");
+
+modalTriggers.forEach(trigger => trigger.
+  addEventListener("click", togglemodal))
+
+
+  function togglemodal(){
+
+  
+    modalContainer.classList.toggle("active")
+  }
+
+
 $('.popin').hide(); /*fadeOut()*/
 			$('footer nav ul li a').click(function(){
 				url = $(this).attr('href');

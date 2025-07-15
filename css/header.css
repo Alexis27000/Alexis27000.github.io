@@ -69,6 +69,13 @@ text-decoration:underline;
 
 }
 
+.active nav ul li a{
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    padding: 05px;
+
+}
+
 #menu_toggle{
 
 display:grid;
