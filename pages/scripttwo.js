@@ -8,6 +8,7 @@ async function chargerMenu() {
     const headertwo = document.getElementById('headertwo');
     const reponse = await fetch('../composants/headertwo.html');
 
+
     if (!reponse.ok) {
       throw new Error('Erreur lors du chargement du menu');
     }
@@ -18,9 +19,6 @@ async function chargerMenu() {
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
-
-
-
 
 
 
@@ -50,6 +48,19 @@ async function chargerMenu() {
     menuBtn.classList.toggle('expanded');
     
   });
+
+      const currentURL = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentURL) {
+      link.classList.add('active');
+    }
+  });
+
+
+
+
 }
 
 

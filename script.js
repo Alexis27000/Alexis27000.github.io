@@ -10,26 +10,9 @@ document.addEventListener('DOMContentLoaded', chargerMenu);
 
 async function chargerMenu() {
   try {
-    const header = document.getElementById('header');
-    const reponse = await fetch('composants/header.html');
-    
-
-
-
-    
-
-   const currentURL = window.location.pathname;
-  const links = document.querySelectorAll('nav ul li a');
-
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentURL) {
-      link.classList.add('active');
-    }
-  });
-  
-
-
-
+  const header = document.getElementById('header');
+  const reponse = await fetch('composants/header.html');
+       
 
     if (!reponse.ok) {
       throw new Error('Erreur lors du chargement du menu');
@@ -37,10 +20,6 @@ async function chargerMenu() {
 
     const html = await reponse.text();
     header.innerHTML = html;
-
-
-
-
 
 
   } catch (erreur) {
@@ -75,8 +54,17 @@ async function chargerMenu() {
     menuBtn.classList.toggle('expanded');
     
   });
-}
 
+  const currentURL = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentURL) {
+  link.classList.add('active');
+    }
+  });
+  
+}
 
 
 
@@ -157,10 +145,10 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("activer", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += "activer";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
