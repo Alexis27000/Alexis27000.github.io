@@ -1,9 +1,49 @@
 
-nav{
 
-font-family: "DM Sans", sans-serif;
-font-optical-sizing: auto;
 
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box; 
+
+
+}
+
+
+
+nav#menu_desktop{
+
+font-family: "Poppins", sans-serif;
+position :relative;
+display: flex;
+justify-content:space-between;
+background: #1e232f;
+padding: 10px 0;
+
+}
+
+nav#menu_desktop a{
+
+position:relative;
+text-decoration: none;
+padding: 15px 25px;
+color: white;
+font-weight:400;
+letter-spacing: 0.1em;
+}
+
+#marker{
+
+position: absolute;
+bottom: 0;
+height: 100%;
+width: 90px;
+border-bottom: 5px solid #08f9ff;
+background: linear-gradient(0deg,#08f9ff33,transparent);
+transition: 0.5s;
+pointer-events: none;
+filter: drop-shadow(0 5px 25px #08f9ff);
 }
 
 nav ul#menu_mobile{
@@ -42,34 +82,10 @@ background-color:#464749;
 
 }
 
-nav ul#menu_desktop li{
 
-padding:1.5em 2em 2em 2em;
 
-}
 
-nav ul#menu_desktop li a{
-
-text-decoration:none;
-color:#e1e2e6;
-
-}
-
-nav ul#menu_desktop li:hover{
-
-background-color:#9b9da188;
-
-}
-
-.active{
-
-color: #e1e2e6;
-border: 2px solid #e1e2e6;
-padding: 10px;
-
-}
-
-#menu_toggle{
+.menu_toggle{
 
 display:grid;
 width: 50px;

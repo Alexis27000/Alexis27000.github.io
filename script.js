@@ -13,8 +13,7 @@ async function chargerMenu() {
   const header = document.getElementById('header');
   const reponse = await fetch('composants/header.html');
 
-       
-
+  
 
     if (!reponse.ok) {
       throw new Error('Erreur lors du chargement du menu');
@@ -22,7 +21,6 @@ async function chargerMenu() {
 
     const html = await reponse.text();
     header.innerHTML = html;
-
 
   } catch (erreur) {
     console.error('Erreur :', erreur);
@@ -43,7 +41,6 @@ async function chargerMenu() {
 
 
 
-
   // je déclare la variable menuBtn = l'id "menu-btn" dans mon html
   let menuBtn = document.getElementById('menu_toggle');
   // je déclare la variable menuMobile = l'id "menu-mobile" dans mon html
@@ -58,18 +55,28 @@ async function chargerMenu() {
   });
 
 
- const currentURL = window.location.pathname;
-  const links = document.querySelectorAll('nav a');
 
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentURL) {
-  link.classList.add('active');
-    }
-  });
+
+
+
+  let marker = document.querySelector('#marker');
+  let item = document.querySelectorAll('nav#menu_desktop a');
+
+  function indicator(e){
+    marker.style.left = e.offsetLeft+'px';
+    marker.style.width= e.offsetWidth+'px';
+  }
+
+  item.forEach(link => {
+    link.addEventListener('click', (e) => {
+      indicator(e.target);
+    })
+  })
+
+
 
 
 }
-
 
   // import-menu.js
 
