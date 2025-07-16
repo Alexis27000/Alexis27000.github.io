@@ -12,7 +12,9 @@ async function chargerMenu() {
   try {
   const header = document.getElementById('header');
   const reponse = await fetch('composants/header.html');
+
        
+
 
     if (!reponse.ok) {
       throw new Error('Erreur lors du chargement du menu');
@@ -36,7 +38,7 @@ async function chargerMenu() {
          paul.addEventListener("click", Pierre);
 
         function Pierre() {
-             menu.classList.toggle("active");
+             menu.classList.toggle("activation");
          }
 
 
@@ -55,7 +57,8 @@ async function chargerMenu() {
     
   });
 
-  const currentURL = window.location.pathname;
+
+ const currentURL = window.location.pathname;
   const links = document.querySelectorAll('nav a');
 
   links.forEach(link => {
@@ -63,9 +66,9 @@ async function chargerMenu() {
   link.classList.add('active');
     }
   });
-  
-}
 
+
+}
 
 
   // import-menu.js
@@ -97,7 +100,7 @@ modalTriggers.forEach(trigger => trigger.
   function togglemodal(){
 
   
-    modalContainer.classList.toggle("active")
+    modalContainer.classList.toggle("actif")
 
 
   }

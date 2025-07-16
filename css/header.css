@@ -24,8 +24,6 @@ padding:1.5em 2em 2em 2em;
 
 }
 
-
-
 nav ul#menu_mobile li a{
 
 text-decoration:none;
@@ -50,23 +48,26 @@ padding:1.5em 2em 2em 2em;
 
 }
 
+nav ul#menu_desktop li a{
+
+text-decoration:none;
+color:#e1e2e6;
+
+}
+
 nav ul#menu_desktop li:hover{
 
 background-color:#9b9da188;
 
 }
 
+.active{
 
-
-#menu_desktop li.active{
-
-    color: rgb(255, 255, 255);
-    border: 2px solid rgb(158, 16, 16);
-    padding: 40px;
+color: #e1e2e6;
+border: 2px solid #e1e2e6;
+padding: 10px;
 
 }
-
-
 
 #menu_toggle{
 
@@ -97,6 +98,7 @@ height: 6px;
 background-color: #e1e2e6;
 border-radius: 1em 1em 1em 1em;
 transition: all 0.5s ease-in-out;
+
 }
 
 nav #menu_toggle .nav_toggle_item:nth-child(3) {

@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', chargerMenu);
 
 async function chargerMenu() {
   try {
-    const headertwo = document.getElementById('headertwo');
-    const reponse = await fetch('../composants/headertwo.html');
+  const header = document.getElementById('headertwo');
+  const reponse = await fetch('../composants/headertwo.html');
+
+       
 
 
     if (!reponse.ok) {
@@ -16,9 +18,11 @@ async function chargerMenu() {
     const html = await reponse.text();
     headertwo.innerHTML = html;
 
+
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
+
 
 
 
@@ -29,9 +33,8 @@ async function chargerMenu() {
          paul.addEventListener("click", Pierre);
 
         function Pierre() {
-             menu.classList.toggle("active");
+             menu.classList.toggle("activation");
          }
-
 
 
 
@@ -49,25 +52,18 @@ async function chargerMenu() {
     
   });
 
-      const currentURL = window.location.pathname;
+
+ const currentURL = window.location.pathname;
   const links = document.querySelectorAll('nav a');
 
   links.forEach(link => {
     if (link.getAttribute('href') === currentURL) {
-      link.classList.add('active');
+  link.classList.add('active');
     }
   });
 
 
-
-
 }
-
-
-
-
-
-
 
 
   // import-menu.js
@@ -85,8 +81,8 @@ fetch('../composants/footertwo.html')
   })
   .then(data => {
     footertwo.innerHTML = data;
+        		
 
-    
 const modalContainer = document.
 querySelector(".modal-container");
 const modalTriggers = document.
@@ -99,27 +95,43 @@ modalTriggers.forEach(trigger => trigger.
   function togglemodal(){
 
   
-    modalContainer.classList.toggle("active")
+    modalContainer.classList.toggle("actif")
+
+
   }
 
-
-$('.popin').hide(); /*fadeOut()*/
-			$('footer nav ul li a').click(function(){
-				url = $(this).attr('href');
-				//alert(url);
-				$(url).show();/*fadeIn()*/
-				return false; /* Je n execute pas le lien */
-	
-			});
-			$('a.fermer').click(function(){
-				$('.popin').hide();/*fadeIn()*/
-				return false; /* Je n execute pas le lien */
-	
-			});
-  })
-  .catch(error => {
-    console.error('Erreur :', error);
-  });
+ } )
 
 
+
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("activer", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += "activer";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 

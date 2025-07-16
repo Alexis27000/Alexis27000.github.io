@@ -1,24 +1,12 @@
 main section#logicielsetlang h2{
 
-
 font-family: "DM Sans", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;
 display: grid;
 justify-content:center;
-padding:6em 2em 2em 2em;
-
-}
-
-main section#logicielsetlang h2:after{
-
-content: ' ';
-width: 19.25rem;
-height: 0.10rem;
-background-color: #000000;
-display: block;
-margin: 0;
+padding:8em 2em 2em 2em;
 
 }
 
@@ -55,7 +43,7 @@ main section#logicielsetlang h4{
 font-family: "DM Sans", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
-color:white;
+color:#e1e2e6;
 
 }
 

@@ -2,20 +2,11 @@ main section#professionnalexperience h2{
 
 display: grid;
 justify-content:center;
-padding:6em 2em 2em 2em;
+padding:8em 2em 2em 2em;
 font-family: "DM Sans", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
   
-}
-
-main section#professionnalexperience h2:after{
-
-content: ' ';
-width: 13.25em;
-height: 0.10em;
-background-color: #000000;
-
 }
 
 main section#professionnalexperience ul{
@@ -32,7 +23,8 @@ margin:0.5em 0.5em 0.5em 6em;
 main section#professionnalexperience ul h3{
 
 border-bottom: 0.15rem inset #1f1f1f;
-color:white;
+color:#e1e2e6;
+
 }
 
 main section#professionnalexperience ul li .date{
@@ -46,9 +38,6 @@ main section#professionnalexperience ul li .entreprise{
 border-bottom: 0.15rem inset #1f1f1f;
 
 }
-
-
-
 
 main section#professionnalexperience ul li{
 

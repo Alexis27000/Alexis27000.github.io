@@ -5,13 +5,13 @@ main section#autresinformations{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-padding:9em 2em 2em 2em;
+padding:9em 0 0 0;
 
 }
 
 main section#autresinformations section#coordonnees section#competencesprofessionnelles section#badgesobtenus section#langues section#centresdinteret{
 
-width: calc(100% / 3 - 0.5rem - 0.5rem - 0.5rem - 0.5rem); 
+width: calc(100% / 4); 
 
 }
 
@@ -24,15 +24,7 @@ font-style: normal;
 display: grid;
 justify-content:center;
 padding:1em 1em 1em 1em;
-
-}
-
-section#coordonnees h2:after{
-
-content: ' ';
-width: 9.25rem;
-height: 0.10rem;
-background-color: #000000;
+color:#e1e2e6;
 
 }
 
@@ -45,7 +37,6 @@ font-weight: 400;
 }
 
  main section#coordonnees{
-
 
 display:grid;
 background-color:  #7a7b81d8 ;
@@ -70,7 +61,6 @@ main section#coordonnees iframe{
 width: 100%;
 height: 15rem;
 margin: 0 0 1rem 0;
-border: 0.25rem solid #772525;
 border-radius: 1rem 1rem 1rem 1rem;
 
 }
@@ -94,14 +84,12 @@ list-style-type:none;
 
 main section#coordonnees ul li{
 
-
 margin: 0 0.5rem 0.5rem 0;
 
 }
 
 main section#coordonnees ul li a{
     
-
 font-weight:800;
 border-bottom: 0.10rem solid transparent;
 transition: all 0.5s ease-in-out;
@@ -115,7 +103,6 @@ color: #09207a;
 }
 
 main section#coordonnees ul li img{
-
 
 font-size: 2.5rem;
 transition: all 0.5s ease-in-out;
@@ -148,17 +135,7 @@ font-weight: 400;
 font-style: normal;
 justify-content:center;
 padding:1em 1em 1em 1em;
-
-}
-
-main section#competencesprofessionnelles h2:after{
-
-content: ' ';
-width: 21.25rem;
-height: 0.10rem;
-background-color: #000000;
-display: block;
-margin: 0.5rem 0 0 0;
+color:#e1e2e6;
 
 }
 
@@ -193,18 +170,7 @@ font-style: normal;
 display: grid;
 justify-content:center;
 padding:1em 1em 1em 1em;
-
-}
-
-main section#badgesobtenus h2:after{
-
-content: ' ';
-width: 11.25rem;
-height: 0.15rem;
-background-color: #000000;
-display: block;
-justify-content:center;
-margin: 0.5rem 0 0 0;
+color:#e1e2e6;
 
 }
 
@@ -244,17 +210,7 @@ font-style: normal;
 display: grid;
 justify-content:center;
 padding:1em 1em 1em 1em;
-
-}
-
-main section#langues h2:after{
-
-content: ' ';
-width: 14rem;
-height: 0.10rem;
-background-color: #000000;
-display: block;
-margin: 0.5rem 0 0 0;
+color:#e1e2e6;
 
 }
 
@@ -264,8 +220,10 @@ font-family: "DM Sans", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;  
-color:white;
+color:#e1e2e6;
+
 }
+
 main section#langues ul{
 
 display: flex;
@@ -346,17 +304,7 @@ font-style: normal;
 display: grid;
 justify-content:center;
 padding:1em 1em 1em 1em;
-
-}
-
-main section#centresdinteret h2:after{
-
-content: ' ';
-width: 11.5rem;
-height: 0.10rem;
-background-color: #000000;
-display: block;
-margin: 0.5rem 0 0 0;
+color:#e1e2e6;
 
 }
 

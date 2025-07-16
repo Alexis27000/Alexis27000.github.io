@@ -2,13 +2,9 @@ main div section#index{
 
 display: grid;
 justify-content:center;
-padding:8em 2em 2em 2em;
+padding:12em 2em 2em 2em;
 
 }
-
-
-
-
 
 * {
 
@@ -22,13 +18,13 @@ box-sizing: border-box;
 position: relative;
 width:720px;
 height:720px;
- 
 }
 
 /* Hide the images by default */
 .mySlides {
 
 display: none;
+height:480px;
 
 }
 
