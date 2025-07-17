@@ -10,7 +10,9 @@ box-sizing:border-box;
 
 }
 
-
+header{
+    position: relative;
+}
 
 nav#menu_desktop{
 
@@ -20,7 +22,6 @@ display: flex;
 justify-content:space-around;
 background: #1e232f;
 padding: 10px 0;
-
 
 }
 
@@ -34,17 +35,17 @@ font-weight:400;
 letter-spacing: 0.1em;
 }
 
-.active{
-
-position: absolute;
+#active{
+left: 0;
+    top:0;
 bottom: 0;
-height: 100%;
-
+right:0;
+position:absolute;
 border-bottom: 5px solid #f8f8f8;
 background: linear-gradient(0deg,#ffffff33,transparent);
-transition: all 0.5s;
 pointer-events: none;
 filter: drop-shadow(0 5px 25px #ffffff);
+transition: all 0.3s;
 }
 
 nav ul#menu_mobile{
