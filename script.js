@@ -43,38 +43,8 @@ async function chargerMenu() {
             // Afficher le lien actif dans la console 
             // Si le lien correspond à la page actuelle, on lui ajoute la classe 'active'
                 link.classList.add('active');
-
-
-              // Sélectionner l'élément actif pour l'indicateur
-
-
-              
-
-
-
-
                 }
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   } catch (erreur) {
@@ -117,7 +87,7 @@ async function chargerMenu() {
 const footer = document.getElementById('footer');
 
 // Charge le fichier menu.html
-fetch('composants/footer.html')
+fetch('/composants/footer.html')
   .then(response => {
     if (!response.ok) {
       throw new Error('Erreur lors du chargement du menu');
