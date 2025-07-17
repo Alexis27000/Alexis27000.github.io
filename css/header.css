@@ -17,9 +17,10 @@ nav#menu_desktop{
 font-family: "Poppins", sans-serif;
 position :relative;
 display: flex;
-justify-content:space-between;
+justify-content:space-around;
 background: #1e232f;
 padding: 10px 0;
+
 
 }
 
@@ -33,17 +34,17 @@ font-weight:400;
 letter-spacing: 0.1em;
 }
 
-#marker{
+.active{
 
 position: absolute;
 bottom: 0;
 height: 100%;
-width: 90px;
-border-bottom: 5px solid #08f9ff;
-background: linear-gradient(0deg,#08f9ff33,transparent);
-transition: 0.5s;
+
+border-bottom: 5px solid #f8f8f8;
+background: linear-gradient(0deg,#ffffff33,transparent);
+transition: all 0.5s;
 pointer-events: none;
-filter: drop-shadow(0 5px 25px #08f9ff);
+filter: drop-shadow(0 5px 25px #ffffff);
 }
 
 nav ul#menu_mobile{

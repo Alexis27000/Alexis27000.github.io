@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', chargerMenu);
 async function chargerMenu() {
   try {
   const header = document.getElementById('header');
-  const reponse = await fetch('composants/header.html');
+  const reponse = await fetch('/composants/header.html');
 
   
 
@@ -21,6 +21,61 @@ async function chargerMenu() {
 
     const html = await reponse.text();
     header.innerHTML = html;
+              const currentPage = window.location.pathname;
+            // Récupérer le nom du fichier actuel depuis l'URL
+            // window.location.pathname donne le chemin complet (ex: "/dossier/index.html")
+            // .split('/') découpe le chemin en tableau selon les "/" (ex: ["", "dossier", "index.html"])
+            // .pop() récupère le dernier élément du tableau (ex: "index.html")
+
+            console.log('Page actuelle:', currentPage);
+
+            // Mettre à jour l'état actif du menu
+            const navLinks = document.querySelectorAll('#menu_desktop a');
+            console.log('Liens de navigation trouvés:', navLinks);
+            // Sélectionner tous les liens de navigation
+            navLinks.forEach(link => {
+            // Pour chaque lien, vérifier s'il correspond à la page actuelle
+                if (link.getAttribute('href') === currentPage) {
+
+            // Si le lien correspond à la page actuelle, on lui ajoute la classe 'active'
+                console.log('Lien actif trouvé:', link.getAttribute('href'));
+
+            // Afficher le lien actif dans la console 
+            // Si le lien correspond à la page actuelle, on lui ajoute la classe 'active'
+                link.classList.add('active');
+
+
+              // Sélectionner l'élément actif pour l'indicateur
+
+
+              
+
+
+
+
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   } catch (erreur) {
     console.error('Erreur :', erreur);
@@ -53,28 +108,6 @@ async function chargerMenu() {
     menuBtn.classList.toggle('expanded');
     
   });
-
-
-
-
-
-
-  let marker = document.querySelector('#marker');
-  let item = document.querySelectorAll('nav#menu_desktop a');
-
-  function indicator(e){
-    marker.style.left = e.offsetLeft+'px';
-    marker.style.width= e.offsetWidth+'px';
-  }
-
-  item.forEach(link => {
-    link.addEventListener('click', (e) => {
-      indicator(e.target);
-    })
-  })
-
-
-
 
 }
 
