@@ -5,6 +5,7 @@
 @import url("css/certifications.css");
 @import url("css/logicielsetlang.css");
 @import url("css/informations.css");
+@import url("css/mecontacter.css");
 @import url("css/responsive.css");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
@@ -23,6 +24,7 @@ main{
       background: url('../assets/studiogris.jpg') no-repeat 0 0;
     background-attachment: cover;
      background-size: cover;
+     object-fit: cover;
      scroll-behavior: smooth;
      background-blend-mode: soft-light;
      background-position: center center;

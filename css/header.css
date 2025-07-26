@@ -11,7 +11,9 @@ box-sizing:border-box;
 }
 
 header{
-    position: relative;
+   
+    position: fixed;
+    width:100%;
 }
 
 nav#menu_desktop{
@@ -36,6 +38,8 @@ letter-spacing: 0.1em;
 }
 
 #active{
+
+
 left: 0;
     top:0;
 bottom: 0;
@@ -46,6 +50,13 @@ background: linear-gradient(0deg,#ffffff33,transparent);
 pointer-events: none;
 filter: drop-shadow(0 5px 25px #ffffff);
 transition: all 0.3s;
+
+
+
+
+
+
+
 }
 
 nav ul#menu_mobile{

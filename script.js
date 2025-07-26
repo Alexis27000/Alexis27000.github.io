@@ -47,8 +47,15 @@ async function chargerMenu() {
     }
     indicator();
     
+    
+
     // Attendre un peu que le DOM soit complètement rendu avant de calculer les positions
 
+  item.forEach(link => {
+    link.addEventListener('click', (e) => {
+      indicator(e.target);
+    })
+  })
 
 
 
@@ -57,6 +64,10 @@ async function chargerMenu() {
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
+
+
+
+
 
 
   // Consolidated mobile menu toggle logic

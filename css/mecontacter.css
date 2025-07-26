@@ -1,0 +1,72 @@
+#mecontacter p{
+
+display:flex;
+justify-content:center;
+text-justify:center;
+padding: 12em 0 0 0;
+}
+
+
+
+#mecontacter h2{
+
+font-family: "DM Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+display: grid;
+justify-content:center;
+padding:1em 1em 1em 1em;
+color:#e1e2e6;  
+}
+
+
+
+
+
+
+
+
+
+#mecontacter form{
+
+display:grid;
+gap: 2em;
+background-color:  #1e232f75 ;
+padding: 0.5rem 2rem 2rem 2rem;
+margin: 4em  1rem 2rem 1rem;
+border-radius: 1rem 1rem 1rem 1rem;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#mecontacter form .nom{
+
+display:flex;
+gap: 2em;
+
+
+}
+
+#mecontacter form .prenom{
+
+display:flex;
+gap: 2em;
+
+
+}
+
+#mecontacter form .tel{
+
+display:flex;
+gap: 2em;
+
+
+}
+
+#mecontacter form .email{
+
+display:flex;
+gap: 2em;
+
+
+}
