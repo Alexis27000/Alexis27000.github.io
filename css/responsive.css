@@ -9,7 +9,7 @@ display:none;
 }
 @media screen and (max-width: 600px){
 
-nav ul#menu_desktop{
+nav#menu_desktop{
 
 display:none;
 

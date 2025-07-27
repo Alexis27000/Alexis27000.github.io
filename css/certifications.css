@@ -1,6 +1,6 @@
 main section#certifications h2{
 
-font-family: "DM Sans", sans-serif;
+font-family: "Poppins", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
 display: grid;
@@ -33,7 +33,7 @@ box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255,
 main section#certifications ul h3{
 
 border-bottom: 0.15rem inset #1f1f1f;
-color:white;
+color:#e1e2e6;
 
 }
 

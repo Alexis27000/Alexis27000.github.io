@@ -10,42 +10,84 @@
         <header id="header">
         </header>
         <main>
-            <section id="mecontacter">
+        
 
 
 
                 <p>Vous souhaitez la création ou une refonte de votre site? <br>
                     N'hésitez pas à me contactez afin que l'on puisse discuter de votre projet.</p>
 
+                
+         <section id="mecontacter"> 
 
-           
+             <h2>Formulaire de contact</h2>
                 <form action="/submit" method="post">
 
-                     <h2>Formulaire de contact</h2>
-                    <div class="nom">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required><br><br>
-                    </div>
-                    <div class="prenom">
-                    <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom" required><br><br>
-                    </div>
-                    <div class="tel">
-                    <label for="tel">Téléphone :</label>
-                    <input type="text" id="tel" name="tel" required><br><br>
-                    </div>
-                    <div class="email">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="prenom" required><br><br>
-                     </div>
-                     <div class="message">
-                    <label for="message">Description de votre projet :</label>
-                    <textarea id="message" name="message" required></textarea><br><br>
-                      </div>
 
-                    <div class="button">
-                    <input type="submit" value="Envoyer">
-                    </div>
+                     <section id="contact">
+                            <div class="nom">
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="nom" name="nom" required><br><br>
+                            </div>
+                      
+
+                            <div class="prenom">
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" id="prenom" name="prenom" required><br><br>
+                            </div>
+
+                            <div class="tel">
+                            <label for="tel">Téléphone :</label>
+                            <input type="text" id="tel" name="tel" required><br><br>
+                            </div>
+
+                            <div class="email">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="prenom" required><br><br>
+                            </div>
+                    </section>
+
+                    <section id="description">
+                            <div class="message">
+                            <label for="message">Description de votre projet :</label>
+                            <textarea id="message" name="message" required></textarea><br><br>
+                            </div>
+                    </section>
+
+
+                    <section id="submit">
+                        <div class="center">
+                              
+                                <div id="captchaBackground">
+<h5 id="captchaHeading">
+                                    Captcha Validator
+                                </h5>
+
+                                    <canvas id="captcha">captcha text</canvas>
+                                    <input id="textBox" type="text" name="text">
+
+                                    <div id="buttons">
+                                        <input id="submitButton" type="submit">
+                                        <button id="refreshButton" type="submit">Refresh</button>
+                                    </div>
+
+                                    <span id="output"></span>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                    
+                            <div class="button">
+                            <input type="submit" value="Envoyer le formulaire">
+                            </div>
+                    </section>
+
                 </form>
 
             </section>

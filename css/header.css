@@ -27,6 +27,18 @@ padding: 10px 0;
 
 }
 
+nav ul#menu_desktop{
+
+display:flex;
+justify-content: space-around;
+gap:3em;
+list-style-type: none;
+background-color:#464749;
+
+
+}
+
+
 nav#menu_desktop a{
 
 position:relative;
@@ -40,18 +52,15 @@ letter-spacing: 0.1em;
 #active{
 
 
-left: 0;
-    top:0;
 bottom: 0;
-right:0;
+height: 100%;
+width: 90px;
 position:absolute;
 border-bottom: 5px solid #f8f8f8;
 background: linear-gradient(0deg,#ffffff33,transparent);
 pointer-events: none;
 filter: drop-shadow(0 5px 25px #ffffff);
-transition: all 0.3s;
-
-
+transition: all 0.5s;
 
 
 
@@ -84,21 +93,10 @@ color:#e1e2e6;
 
 }
 
-nav ul#menu_desktop{
-
-display:flex;
-justify-content: space-around;
-gap:3em;
-list-style-type: none;
-background-color:#464749;
-
-
-}
 
 
 
-
-.menu_toggle{
+#menu_toggle{
 
 display:grid;
 width: 50px;
@@ -140,7 +138,7 @@ transition: all 0.5s ease-in-out;
 
 }
 
-#menu_mobile.active{
+#menu_mobile.activation{
 
     display:flex ;
 

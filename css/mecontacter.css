@@ -1,49 +1,68 @@
-#mecontacter p{
+p{
 
 display:flex;
 justify-content:center;
-text-justify:center;
+text-align:center;
 padding: 12em 0 0 0;
 }
 
 
 
-#mecontacter h2{
+section#mecontacter{
 
-font-family: "DM Sans", sans-serif;
+display:grid;
+background-color:  #1e232f75 ;
+padding: 0.5rem 2rem 2rem 2rem;
+margin: 3em  3rem 2rem 3rem;
+border-radius: 1rem 1rem 1rem 1rem;
+box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+section#mecontacter h2{
+
+font-family: "Poppins", sans-serif;
 font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;
 display: grid;
+
 justify-content:center;
 padding:1em 1em 1em 1em;
 color:#e1e2e6;  
 }
 
 
+section#mecontacter form{
 
+display:flex;
+flex-wrap:wrap;
+padding:1em;
+gap:5em;
+}
 
-
-
-
-
-
-#mecontacter form{
+section#mecontacter form section#contact{
 
 display:grid;
-gap: 2em;
-background-color:  #1e232f75 ;
-padding: 0.5rem 2rem 2rem 2rem;
-margin: 4em  1rem 2rem 1rem;
-border-radius: 1rem 1rem 1rem 1rem;
-box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+gap:2em;
+padding:2em;
+
 }
+
+
 
 #mecontacter form .nom{
 
 display:flex;
 gap: 2em;
 
+
+}
+
+#mecontacter form .nom input{
+
+width: 20em;
+height: 2em;
 
 }
 
@@ -55,6 +74,15 @@ gap: 2em;
 
 }
 
+#mecontacter form .prenom input{
+
+width: 18.5em;
+height: 2em;
+
+}
+
+
+
 #mecontacter form .tel{
 
 display:flex;
@@ -63,10 +91,172 @@ gap: 2em;
 
 }
 
+#mecontacter form .tel input{
+
+width: 17em;
+height: 2em;
+
+}
 #mecontacter form .email{
 
 display:flex;
 gap: 2em;
 
 
+}
+
+#mecontacter form .email input{
+
+width: 19.5em;
+height: 2em;
+
+}
+section#mecontacter form section#description{
+
+display:grid;
+gap:2em;
+padding:2em;
+
+}
+
+
+
+
+#mecontacter form .message{
+
+
+display:grid;
+gap: 2em;
+
+
+}
+
+#mecontacter form .message textarea{
+    width: 25em;
+    height:20em;
+}
+
+section#mecontacter form section#submit{
+
+display:grid;
+gap:2em;
+padding:2em;
+
+
+}
+
+
+
+
+
+#captchaBackground {
+    height: 12em;
+    width: 20em;
+    background-color: #1e232f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius:8px;
+    
+ 
+}
+
+#captchaHeading {
+    color: white;
+}
+
+#captcha {
+    height: 40%;
+    width: 100%;
+    align-items:center;
+    font-size: 30px;
+    letter-spacing: 3px;
+    display: block;
+
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submitButton {
+    
+    font-family: "Poppins", sans-serif;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 0px;
+    font-weight:400;
+    border-radius:2px;
+    height:20px;
+    width:55px;
+
+}
+#submitButton:hover{
+
+    background-color: #e1e2e6;
+    cursor: pointer; 
+}
+
+
+#refreshButton {
+
+   font-family: "Poppins", sans-serif;
+    border: 0px;
+    font-weight: 400;
+    border-radius:2px;
+    height:20px;
+    width:55px;
+
+}
+#refreshButton:hover{
+    background-color: #e1e2e6;
+
+    cursor: pointer; 
+}
+
+#textBox {
+    height: 25px;
+}
+
+.incorrectCaptcha {
+    color: #940000;
+}
+
+.correctCaptcha {
+    color: #366d00;
+}
+
+
+
+.button{
+
+position:relative;
+
+}
+
+.button input{
+
+font-family: "Poppins", sans-serif;   
+padding: 10px 14px;
+font-size: 15px;
+display:block;
+min-width: 150px;
+cursor: pointer; 
+transition: visibility 0.5s;
+margin:0 0 2em 0;
+background-color:#1e232f;
+color: #e1e2e6;
+border-radius:8px;
+
+
+
+}
+.button input:hover{
+
+  background-color:#1e232fb4;
+color: #e1e2e6;
+border-color: #e1e2e6;
 }
