@@ -1,10 +1,6 @@
 
 
-
-
-
-
-
+//HEADER
 
 document.addEventListener('DOMContentLoaded', chargerMenu);
 
@@ -22,7 +18,8 @@ async function chargerMenu() {
     const html = await reponse.text();
     header.innerHTML = html;
 
-    // Sélectionner les liens de navigation après que le header a été chargé
+
+ // Sélectionner les liens de navigation après que le header a été chargé
     const navLinks = document.querySelectorAll('#menu_desktop a');
     const active = document.getElementById('active');
 
@@ -47,27 +44,26 @@ async function chargerMenu() {
     }
     indicator();
     
-    
-
     // Attendre un peu que le DOM soit complètement rendu avant de calculer les positions
-
-  item.forEach(link => {
-    link.addEventListener('click', (e) => {
-      indicator(e.target);
-    })
-  })
-
-
-
 
 
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
 
+// Consolidated mobile menu toggle logic
+  let menuBtn = document.getElementById('menu_toggle');
+  let menuMobile = document.getElementById('menu_mobile');
 
+  menuBtn.addEventListener('click', function () {
+    // Toggle both "activation" and "hidden" classes for menuMobile
+    menuMobile.classList.toggle('activation');
+    menuMobile.classList.toggle('hidden');
+    // Toggle "expanded" class for menuBtn
+    menuBtn.classList.toggle('expanded');
+  });
 
-
+}
 
 
 //CAPTCHA
@@ -137,50 +133,6 @@ refreshButton.addEventListener('click', generate_captcha);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Consolidated mobile menu toggle logic
-  let menuBtn = document.getElementById('menu_toggle');
-  let menuMobile = document.getElementById('menu_mobile');
-
-  menuBtn.addEventListener('click', function () {
-    // Toggle both "activation" and "hidden" classes for menuMobile
-    menuMobile.classList.toggle('activation');
-    menuMobile.classList.toggle('hidden');
-    // Toggle "expanded" class for menuBtn
-    menuBtn.classList.toggle('expanded');
-  });
-
-}
 
 //MENU FOOTER
 
