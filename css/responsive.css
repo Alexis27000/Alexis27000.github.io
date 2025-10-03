@@ -25,3 +25,161 @@ display:none;
  } 
 
 }
+
+/* ---------- Responsive additions for tablet & mobile ---------- */
+
+/* Large tablets / small desktops */
+@media screen and (max-width: 1024px) {
+	/* centre le contenu principal et réduit la largeur du slider */
+	main div section#index {
+		padding: 8em 1.5em 2em 1.5em;
+	}
+
+	.container {
+		width: 90%;
+		max-width: 900px;
+		height: 520px;
+	}
+
+	.numbertext {
+		font-size: 11px;
+		padding: 6px 10px;
+	}
+
+	.prev, .next {
+		padding: 12px;
+		font-size: 18px;
+	}
+}
+
+/* Standard tablet and large phones */
+@media screen and (max-width: 768px) {
+	main div section#index {
+		padding: 6em 1em 2em 1em;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 720px;
+		height: 480px;
+		margin: 0 auto;
+	}
+
+	/* Make caption slightly smaller on tablet */
+	#caption { font-size: 15px; }
+
+	/* Thumbnails: 3 per row on tablet */
+	.column { width: 33.333%; }
+
+	/* Slightly larger controls for touch */
+	.prev, .next { padding: 14px; font-size: 20px; }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 600px) {
+	/* header/menu handled above; focus on content */
+	main div section#index {
+		padding: 5.5em 0.75em 2em 0.75em;
+	}
+
+	.container {
+		width: 100%;
+		height: auto; /* let images define height */
+		max-width: 100%;
+	}
+
+	/* Show slides full width and adjust sizing */
+	.mySlides img { width: 100%; height: auto; display: block; }
+
+	/* Thumbnails: 2 per row on small screens, full-width on very small */
+	.column { width: 50%; }
+
+	@media screen and (max-width: 420px) {
+		.column { width: 100%; }
+		#caption { font-size: 14px; }
+	}
+
+	/* Caption occupies slightly more vertical space on mobile */
+	.caption-container { padding: 12px 10px; }
+
+	/* Controls: larger tap targets */
+	.prev, .next { padding: 18px; font-size: 22px; }
+}
+
+/* Accessibility: ensure focus outlines remain visible */
+/* Use :focus-visible to show focus outlines only for keyboard users.
+	This prevents the dashed outline when clicking with a mouse while
+	keeping an accessible indicator for keyboard navigation. */
+:focus { outline: none; }
+/* Preferred: show visible outline for keyboard focus */
+:focus-visible { outline: 2px dashed rgba(255,255,255,0.35); outline-offset: 2px; }
+
+/* Fallback for browsers that don't support :focus-visible:
+	You can include the "what-input" or "focus-visible" polyfill and
+	then add the class .js-focus-visible to <html> to simulate support.
+	Example fallback (uncomment if using polyfill):
+	.js-focus-visible :focus:not(.focus-visible) { outline: none; }
+*/
+
+/* End responsive additions */
+
+/* ---------- Page-wide responsive rules for other sections ---------- */
+/* Stack 3-column cards (experiences, certifications, logiciels) */
+@media screen and (max-width: 1024px) {
+	main section#professionnalexperience ul li,
+	main section#certifications ul li,
+	main section#logicielsetlang ul li {
+		width: calc(50% - 1rem);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	main section#professionnalexperience ul li,
+	main section#certifications ul li,
+	main section#logicielsetlang ul li {
+		width: calc(100% - 2rem);
+		margin: 0.5rem auto;
+	}
+
+	/* Informations page: sections should be full-width stacked */
+	main section#autresinformations {
+		padding: 6em 0.5em 2em 0.5em;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main section#coordonnees,
+	main section#competencesprofessionnelles,
+	main section#badgesobtenus,
+	main section#langues,
+	main section#centresdinteret {
+		width: calc(100% - 2rem);
+		margin: 0.5rem 1rem;
+	}
+
+	/* Make iframes (map, badges) responsive */
+	main section#coordonnees iframe { height: 12rem; }
+	main section#badgesobtenus ul li iframe { width: 140px; height: 110px; }
+
+	/* Contact form: inputs and textarea full width */
+	section#mecontacter form { flex-direction: column; gap: 1rem; }
+	#mecontacter form .nom input,
+	#mecontacter form .prenom input,
+	#mecontacter form .tel input,
+	#mecontacter form .email input,
+	#mecontacter form .message textarea {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+
+	/* Reduce large paddings/margins site-wide */
+	main, body { padding: 0; }
+}
+
+@media screen and (max-width: 420px) {
+	/* Very small screens: reduce font-size and spacing */
+	body { font-size: 14px; }
+	main div section#index { padding: 5em 0.5em 1.5em 0.5em; }
+	.caption-container { font-size: 14px; }
+}

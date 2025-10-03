@@ -22,29 +22,66 @@ async function chargerMenu() {
  // Sélectionner les liens de navigation après que le header a été chargé
     const navLinks = document.querySelectorAll('#menu_desktop a');
     const active = document.getElementById('active');
+    const navMenu = document.getElementById('menu_desktop');
 
     let currentPage = window.location.pathname;
 
-    // Variables globales pour retenir les valeurs
-    let currentOffsetLeft ;
-    let currentOffsetWidth ;
+    // Debounce helper
+    function debounce(fn, wait) {
+      let t;
+      return function(...args) {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, args), wait);
+      };
+    }
 
-    function indicator() {
-      let element = Array.from(navLinks).find(link => link.getAttribute('href') === currentPage);
-      if (element) {
-        currentOffsetLeft = element.offsetLeft;
-        currentOffsetWidth = element.offsetWidth;
-        active.style.left = currentOffsetLeft + 'px';
-        active.style.width = currentOffsetWidth + 'px';
+    // Move the indicator to the given element (coordinates relative to navMenu)
+    function moveIndicatorTo(element) {
+      if (!element || !navMenu) return;
+      const navRect = navMenu.getBoundingClientRect();
+      const elRect = element.getBoundingClientRect();
+      const left = Math.round(elRect.left - navRect.left + navMenu.scrollLeft);
+      const width = Math.round(elRect.width);
+      active.style.width = width + 'px';
+      active.style.left = left + 'px';
+    }
 
-       currentOffsetLeft = element.offsetLeft + 'px';
-       currentOffsetWidth = element.offsetWidth + 'px';
+    // Find the link matching the current page (fallback to first link)
+    function getCurrentLink() {
+      let found = Array.from(navLinks).find(link => link.getAttribute('href') === currentPage || link.getAttribute('href') === window.location.pathname);
+      return found || navLinks[0] || null;
+    }
 
+    // Reset indicator to the current page link
+    function resetIndicator() {
+      const el = getCurrentLink();
+      if (el) moveIndicatorTo(el);
+      else {
+        active.style.width = '0px';
       }
     }
-    indicator();
-    
-    // Attendre un peu que le DOM soit complètement rendu avant de calculer les positions
+
+    // Initialize indicator after render
+    setTimeout(resetIndicator, 30);
+
+    // Add hover and focus interactions for instant feedback
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => moveIndicatorTo(link));
+      link.addEventListener('focus', () => moveIndicatorTo(link));
+      link.addEventListener('mouseleave', () => resetIndicator());
+      link.addEventListener('blur', () => resetIndicator());
+      // If user clicks a link that doesn't navigate away (SPA), update currentPage
+      link.addEventListener('click', () => {
+        currentPage = link.getAttribute('href');
+        // small timeout to allow navigation rendering if any
+        setTimeout(resetIndicator, 50);
+      });
+    });
+
+    // Recalculate positions on resize with debounce
+    window.addEventListener('resize', debounce(() => {
+      resetIndicator();
+    }, 120));
 
 
   } catch (erreur) {
@@ -66,72 +103,8 @@ async function chargerMenu() {
 }
 
 
-//CAPTCHA
 
-let captchaText = document.getElementById('captcha');
-var ctx = captchaText.getContext("2d");
-ctx.font = "30px Roboto";
-ctx.fillStyle = "#e1e2e6";
-
-let userText = document.getElementById('textBox');
-let submitButton = document.getElementById('submitButton');
-let output = document.getElementById('output');
-let refreshButton = document.getElementById('refreshButton');
-
-
-var captchaStr = "";
-
-let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
-                 'H', 'I', 'J', 'K', 'L', 'M', 'N', 
-                 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 
-                 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 
-                 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
-                 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
-                 'q', 'r', 's', 't', 'u', 'v', 'w', 
-                 'x', 'y', 'z', '0', '1', '2', '3', 
-                 '4', '5', '6', '7', '8', '9'];
-
-
-
-function generate_captcha() {
-   let emptyArr = [];
-
-   for (let i = 1; i <= 7; i++) {
-       emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-   }
-
-   captchaStr = emptyArr.join('');
-
-   ctx.clearRect(0, 0, captchaText.width, captchaText.height);
-   ctx.fillText(captchaStr, captchaText.width/4, captchaText.height/2);
-
-   output.innerHTML = "";
-}
-
-generate_captcha();
-
-function check_captcha() {
-    if (userText.value === captchaStr) {
-        output.className = "correctCaptcha";
-        output.innerHTML = "Correct!";
-    } else {
-        output.className = "incorrectCaptcha";
-        output.innerHTML = "Incorrect, please try again!";
-    }
-}
-
-userText.addEventListener('keyup', function(e) {
-    if (e.key === 'Enter') {
-       check_captcha();
-    }
-});
-
-submitButton.addEventListener('click', check_captcha);
-
-refreshButton.addEventListener('click', generate_captcha);
-    
-
-
+  
 
 
 //MENU FOOTER
@@ -185,37 +158,45 @@ fetch('/composants/footer.html')
 
 
 
-//SLIDE
+// SLIDE (initialise uniquement si le markup existe)
+{
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("demo");
+  const captionText = document.getElementById("caption");
 
-let slideIndex = 1;
-showSlides(slideIndex);
+  if (slides.length && dots.length && captionText) {
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    // Expose controls globally (used by inline onclick in HTML)
+    window.plusSlides = plusSlides;
+    window.currentSlide = currentSlide;
+
+    function showSlides(n) {
+      let i;
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("activer", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += "activer";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("activer", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += "activer";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
 
