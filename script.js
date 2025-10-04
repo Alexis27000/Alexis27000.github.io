@@ -68,7 +68,7 @@ async function chargerMenu() {
     navLinks.forEach(link => {
       link.addEventListener('mouseenter', () => moveIndicatorTo(link));
       link.addEventListener('focus', () => moveIndicatorTo(link));
-      link.addEventListener('mouseleave', () => resetIndicator());
+      // Keep blur handler for keyboard accessibility
       link.addEventListener('blur', () => resetIndicator());
       // If user clicks a link that doesn't navigate away (SPA), update currentPage
       link.addEventListener('click', () => {
@@ -77,6 +77,14 @@ async function chargerMenu() {
         setTimeout(resetIndicator, 50);
       });
     });
+
+    // Reset indicator when the mouse leaves the whole navigation area
+    if (navMenu) {
+      navMenu.addEventListener('mouseleave', () => {
+        // Use a tiny timeout to avoid flicker when moving between links quickly
+        setTimeout(resetIndicator, 10);
+      });
+    }
 
     // Recalculate positions on resize with debounce
     window.addEventListener('resize', debounce(() => {

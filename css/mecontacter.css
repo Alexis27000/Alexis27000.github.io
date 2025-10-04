@@ -13,7 +13,7 @@ section#mecontacter{
 display:grid;
 background-color:  #1e232f75 ;
 padding: 0.5rem 2rem 2rem 2rem;
-margin: 3em  3rem 2rem 3rem;
+margin: 2em  2rem 2rem 2rem;
 border-radius: 1rem 1rem 1rem 1rem;
 box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -36,6 +36,7 @@ section#mecontacter form{
 
 display:flex;
 flex-wrap:wrap;
+justify-content:center;
 padding:1em;
 gap:5em;
 }
@@ -136,104 +137,14 @@ gap: 2em;
     height:20em;
 }
 
-section#mecontacter form section#submit{
-
-display:grid;
-gap:2em;
-padding:2em;
-
-
-}
-
-
-
-
-
-#captchaBackground {
-    height: 12em;
-    width: 20em;
-    background-color: #1e232f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius:8px;
-    
- 
-}
-
-#captchaHeading {
-    color: white;
-}
-
-#captcha {
-    height: 40%;
-    width: 100%;
-    align-items:center;
-    font-size: 30px;
-    letter-spacing: 3px;
-    display: block;
-
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#submitButton {
-    
-    font-family: "Poppins", sans-serif;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    border: 0px;
-    font-weight:400;
-    border-radius:2px;
-    height:20px;
-    width:55px;
-
-}
-#submitButton:hover{
-
-    background-color: #e1e2e6;
-    cursor: pointer; 
-}
-
-
-#refreshButton {
-
-   font-family: "Poppins", sans-serif;
-    border: 0px;
-    font-weight: 400;
-    border-radius:2px;
-    height:20px;
-    width:55px;
-
-}
-#refreshButton:hover{
-    background-color: #e1e2e6;
-
-    cursor: pointer; 
-}
-
-#textBox {
-    height: 25px;
-}
-
-.incorrectCaptcha {
-    color: #940000;
-}
-
-.correctCaptcha {
-    color: #366d00;
-}
-
 
 
 .button{
 
+display:flex;
+justify-content:center;
 position:relative;
+
 
 }
 
@@ -261,67 +172,3 @@ color: #e1e2e6;
 border-color: #e1e2e6;
 }
 
-/* Newsletter block - styled to match other page blocks */
-.newsletter-block{
-    display:grid;
-    background-color:  #1e232f75 ;
-    padding: 1rem 2rem 2rem 2rem;
-    margin: 2em  3rem 3rem 3rem;
-    border-radius: 1rem;
-    box-shadow: rgba(255, 255, 255, 0.329) 0px 50px 100px -20px, rgba(255, 255, 255, 0.514) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-.newsletter-block h2{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    justify-content:center;
-    color:#e1e2e6;
-    padding:0.8em 0;
-}
-
-.newsletter-block p{
-    color:#d9dbe0;
-    margin-bottom:1rem;
-}
-
-.newsletter-block form{
-    display:flex;
-    flex-wrap:wrap;
-    gap:1rem;
-    align-items:center;
-}
-
-.newsletter-row{
-    display:flex;
-    flex-direction:column;
-    gap:0.4rem;
-}
-
-.newsletter-row input[type="text"],
-.newsletter-row input[type="email"]{
-    padding:0.6rem 0.8rem;
-    border-radius:8px;
-    border:0;
-    background-color:#12141a;
-    color:#e1e2e6;
-    min-width:220px;
-}
-
-.newsletter-row input[type="submit"]{
-    background-color:#1e232f;
-    color:#e1e2e6;
-    padding:10px 16px;
-    border-radius:8px;
-    border:0;
-    cursor:pointer;
-}
-
-.newsletter-row input[type="submit"]:hover{
-    background-color:#1e232fb4;
-}
-
-.newsletter-note{
-    color:#bfc3c9;
-    font-size:0.85rem;
-    margin-top:0.8rem;
-}

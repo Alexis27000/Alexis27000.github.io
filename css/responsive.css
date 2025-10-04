@@ -38,7 +38,7 @@ display:none;
 	.container {
 		width: 90%;
 		max-width: 900px;
-		height: 520px;
+		height: 600px;
 	}
 
 	.numbertext {
@@ -103,7 +103,7 @@ display:none;
 	.caption-container { padding: 12px 10px; }
 
 	/* Controls: larger tap targets */
-	.prev, .next { padding: 18px; font-size: 22px; }
+	.prev, .next { padding: 8px; font-size: 22px; }
 }
 
 /* Accessibility: ensure focus outlines remain visible */
@@ -129,7 +129,7 @@ display:none;
 	main section#professionnalexperience ul li,
 	main section#certifications ul li,
 	main section#logicielsetlang ul li {
-		width: calc(50% - 1rem);
+		width: calc(100% - 1rem);
 	}
 }
 
@@ -137,7 +137,7 @@ display:none;
 	main section#professionnalexperience ul li,
 	main section#certifications ul li,
 	main section#logicielsetlang ul li {
-		width: calc(100% - 2rem);
+		width: calc(100% );
 		margin: 0.5rem auto;
 	}
 
